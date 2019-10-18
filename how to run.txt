@@ -1,0 +1,6 @@
+- Open anaconda prompt
+- conda deactivate (deactivate (base) enironment)
+- conda activate py37
+- cd C:\Users\BN\Desktop\Sign-Language-Translator-master\Sign-Language-Translator-master
+- python main.py
+- Close anaconda prompt to exit
