@@ -1,0 +1,146 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'userregister.ui'
+#
+# Created by: PyQt5 UI code generator 5.9.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+import sqlite3
+class Ui_registerWindow(object):
+    def setupUi(self, registerWindow):
+        registerWindow.setObjectName("registerWindow")
+        registerWindow.resize(390, 518)
+        registerWindow.setStyleSheet("background-color: rgb(255, 24, 93);\n"
+"font: 12pt \"MS UI Gothic\";\n"
+"background-color: rgb(255, 0, 0);")
+        self.centralwidget = QtWidgets.QWidget(registerWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.passLabel_2 = QtWidgets.QLabel(self.centralwidget)
+        self.passLabel_2.setGeometry(QtCore.QRect(70, 130, 101, 16))
+        self.passLabel_2.setStyleSheet("color: rgb(255, 255, 255);")
+        self.passLabel_2.setObjectName("passLabel_2")
+        self.userLabel_2 = QtWidgets.QLabel(self.centralwidget)
+        self.userLabel_2.setGeometry(QtCore.QRect(70, 80, 101, 16))
+        self.userLabel_2.setStyleSheet("color: rgb(255, 255, 255);")
+        self.userLabel_2.setObjectName("userLabel_2")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(140, 390, 93, 28))
+        self.pushButton.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.pushButton.setObjectName("pushButton")
+        self.userLineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.userLineEdit.setGeometry(QtCore.QRect(170, 80, 161, 22))
+        self.userLineEdit.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.userLineEdit.setInputMask("")
+        self.userLineEdit.setText("")
+        self.userLineEdit.setObjectName("userLineEdit")
+        self.passLineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.passLineEdit.setGeometry(QtCore.QRect(170, 130, 161, 22))
+        self.passLineEdit.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.passLineEdit.setObjectName("passLineEdit")
+        self.closeButton = QtWidgets.QPushButton(self.centralwidget)
+        self.closeButton.setGeometry(QtCore.QRect(140, 430, 93, 28))
+        self.closeButton.setStyleSheet("\n"
+"background-color: rgb(255, 255, 255);")
+        self.closeButton.setObjectName("closeButton")
+        self.userLineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
+        self.userLineEdit_2.setGeometry(QtCore.QRect(170, 220, 161, 22))
+        self.userLineEdit_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.userLineEdit_2.setInputMask("")
+        self.userLineEdit_2.setText("")
+        self.userLineEdit_2.setObjectName("userLineEdit_2")
+        self.userLabel_3 = QtWidgets.QLabel(self.centralwidget)
+        self.userLabel_3.setGeometry(QtCore.QRect(70, 220, 101, 16))
+        self.userLabel_3.setStyleSheet("color: rgb(255, 255, 255);")
+        self.userLabel_3.setObjectName("userLabel_3")
+        self.userLabel_4 = QtWidgets.QLabel(self.centralwidget)
+        self.userLabel_4.setGeometry(QtCore.QRect(70, 260, 101, 16))
+        self.userLabel_4.setStyleSheet("color: rgb(255, 255, 255);")
+        self.userLabel_4.setObjectName("userLabel_4")
+        self.userLineEdit_3 = QtWidgets.QLineEdit(self.centralwidget)
+        self.userLineEdit_3.setGeometry(QtCore.QRect(170, 260, 161, 22))
+        self.userLineEdit_3.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.userLineEdit_3.setInputMask("")
+        self.userLineEdit_3.setText("")
+        self.userLineEdit_3.setObjectName("userLineEdit_3")
+        self.userLabel_5 = QtWidgets.QLabel(self.centralwidget)
+        self.userLabel_5.setGeometry(QtCore.QRect(100, 300, 61, 16))
+        self.userLabel_5.setStyleSheet("color: rgb(255, 255, 255);")
+        self.userLabel_5.setObjectName("userLabel_5")
+        self.userLineEdit_4 = QtWidgets.QLineEdit(self.centralwidget)
+        self.userLineEdit_4.setGeometry(QtCore.QRect(170, 300, 161, 22))
+        self.userLineEdit_4.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.userLineEdit_4.setInputMask("")
+        self.userLineEdit_4.setText("")
+        self.userLineEdit_4.setObjectName("userLineEdit_4")
+        self.userLabel_6 = QtWidgets.QLabel(self.centralwidget)
+        self.userLabel_6.setGeometry(QtCore.QRect(100, 340, 71, 16))
+        self.userLabel_6.setStyleSheet("color: rgb(255, 255, 255);")
+        self.userLabel_6.setObjectName("userLabel_6")
+        self.userLineEdit_5 = QtWidgets.QLineEdit(self.centralwidget)
+        self.userLineEdit_5.setGeometry(QtCore.QRect(170, 340, 161, 22))
+        self.userLineEdit_5.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.userLineEdit_5.setInputMask("")
+        self.userLineEdit_5.setText("")
+        self.userLineEdit_5.setObjectName("userLineEdit_5")
+        self.userLabel = QtWidgets.QLabel(self.centralwidget)
+        self.userLabel.setGeometry(QtCore.QRect(160, 40, 101, 16))
+        self.userLabel.setStyleSheet("color: rgb(255, 255, 255);")
+        self.userLabel.setObjectName("userLabel")
+        self.userLabel_7 = QtWidgets.QLabel(self.centralwidget)
+        self.userLabel_7.setGeometry(QtCore.QRect(150, 180, 101, 16))
+        self.userLabel_7.setStyleSheet("color: rgb(255, 255, 255);")
+        self.userLabel_7.setObjectName("userLabel_7")
+        registerWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(registerWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 390, 26))
+        self.menubar.setObjectName("menubar")
+        registerWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(registerWindow)
+        self.statusbar.setObjectName("statusbar")
+        registerWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(registerWindow)
+        #####
+        self.pushButton.clicked.connect(self.register)
+        self.closeButton.clicked.connect(registerWindow.close)
+        #####
+        QtCore.QMetaObject.connectSlotsByName(registerWindow)
+        
+    def register(self):
+        username = self.userLineEdit.text()
+        password = self.passLineEdit.text()
+        firstname = self.userLineEdit_2.text()
+        lastname = self.userLineEdit_3.text()
+        course = self.userLineEdit_4.text()
+        section = self.userLineEdit_5.text()
+        con = sqlite3.connect("userlogin.db")
+        cur = con.cursor()
+        cur.execute('INSERT INTO admin (username,password,FirstName,LastName,Course,Section) VALUES (?,?,?,?,?,?)',(username,password,firstname,lastname,course,section))
+        con.commit()
+        
+
+        
+    def retranslateUi(self, registerWindow):
+        _translate = QtCore.QCoreApplication.translate
+        registerWindow.setWindowTitle(_translate("registerWindow", "Register Form"))
+        self.passLabel_2.setText(_translate("registerWindow", "Password:"))
+        self.userLabel_2.setText(_translate("registerWindow", "Username:"))
+        self.pushButton.setText(_translate("registerWindow", "Register"))
+        self.closeButton.setText(_translate("registerWindow", "Close"))
+        self.userLabel_3.setText(_translate("registerWindow", "First Name:"))
+        self.userLabel_4.setText(_translate("registerWindow", "Last Name:"))
+        self.userLabel_5.setText(_translate("registerWindow", "Course:"))
+        self.userLabel_6.setText(_translate("registerWindow", "Section:"))
+        self.userLabel.setText(_translate("registerWindow", "Register"))
+        self.userLabel_7.setText(_translate("registerWindow", "Information"))
+
+if __name__ == "__main__":
+        import sys
+        app = QtWidgets.QApplication(sys.argv)
+        registerWindow = QtWidgets.QMainWindow()
+        ui = Ui_registerWindow()
+        ui.setupUi(registerWindow)
+        registerWindow.show()
+        sys.exit(app.exec_())
